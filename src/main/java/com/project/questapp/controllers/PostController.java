@@ -31,10 +31,10 @@ public class PostController {
 
     @GetMapping("/{postId}")
     public Post getOnePost(@PathVariable Long postId){
-        return postService.getOnePostId(postId);
+        return postService.getOnePostById(postId);
     }
 
-    @PutMapping("{/postId}")
+    @PutMapping("/{postId}")
     public Post updateOnePost(@PathVariable Long postId, @RequestBody PostUpdateRequest updatePost){
         return postService.updateOnePostById(postId,updatePost);
     }
